@@ -8,3 +8,4 @@
 - socket layer now has a middleware for identity management
 - data is persisting now
 - e2e tests were performed
+- replaced kafka with redis streams
