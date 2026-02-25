@@ -1,0 +1,44 @@
+[
+  {
+    "id": "two-sum",
+    "title": "Two Sum",
+    "placeholder": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        // Your code here\n        \n    }\n};",
+    "description": "Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.",
+    "driverCode": "// User code inserted here\n\nint main() {\n    string line;\n    getline(cin, line);\n    if(line[0] == '[') line = line.substr(1, line.length() - 2);\n    stringstream ss(line);\n    vector<int> nums;\n    string val;\n    while (getline(ss, val, ',')) nums.push_back(stoi(val));\n    \n    int target;\n    cin >> target;\n\n    Solution sol;\n    vector<int> result = sol.twoSum(nums, target);\n    sort(result.begin(), result.end());\n\n    cout << \"[\" << result[0] << \",\" << result[1] << \"]\" << endl;\n    return 0;\n}",
+    "constraints": "• 2 <= nums.length <= 10^4\n• -10^9 <= nums[i] <= 10^9\n• -10^9 <= target <= 10^9\n• Only one valid answer exists.",
+    "testCases": [
+      {
+        "input": "[2,7,11,15]\n9",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "id": "valid-parentheses",
+    "title": "Valid Parentheses",
+    "placeholder": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isValid(string s) {\n        // Your code here\n        \n    }\n};",
+    "description": "Given a string `s` containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n1. Open brackets must be closed by the same type of brackets.\n2. Open brackets must be closed in the correct order.\n3. Every close bracket has a corresponding open bracket of the same type.",
+    "driverCode": "// User code inserted here\n\nint main() {\n    string s;\n    cin >> s;\n    Solution sol;\n    if (sol.isValid(s)) cout << \"true\" << endl;\n    else cout << \"false\" << endl;\n    return 0;\n}",
+    "constraints": "• 1 <= s.length <= 10^4\n• s consists of parentheses only '()[]{}'.",
+    "testCases": [
+      {
+        "input": "()[]{}",
+        "output": "true"
+      }
+    ]
+  },
+  {
+    "id": "binary-search",
+    "title": "Binary Search",
+    "placeholder": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        // Your code here\n        \n    }\n};",
+    "description": "Given an array of integers `nums` which is sorted in ascending order, and an integer `target`, write a function to search `target` in `nums`. If `target` exists, then return its index. Otherwise, return -1.\n\nYou must write an algorithm with O(log n) runtime complexity.",
+    "driverCode": "// User code inserted here\n\nint main() {\n    string line;\n    getline(cin, line);\n    if(line[0] == '[') line = line.substr(1, line.length() - 2);\n    stringstream ss(line);\n    vector<int> nums;\n    string val;\n    while (getline(ss, val, ',')) {\n        if(!val.empty()) nums.push_back(stoi(val));\n    }\n    \n    int target;\n    cin >> target;\n\n    Solution sol;\n    cout << sol.search(nums, target) << endl;\n    return 0;\n}",
+    "constraints": "• 1 <= nums.length <= 10^4\n• -10^4 < nums[i], target < 10^4\n• All the integers in nums are unique.\n• nums is sorted in ascending order.",
+    "testCases": [
+      {
+        "input": "[-1,0,3,5,9,12]\n9",
+        "output": "4"
+      }
+    ]
+  }
+]
